@@ -1,0 +1,384 @@
+.section {
+  background: #1E202C;
+  overflow: hidden;
+  /*正式用 需要去掉的*/
+  padding: 0 0.4rem;
+}
+
+
+/*specific css*/
+
+
+/*page1*/
+
+.section:nth-child(1) p.info-title,
+.section:nth-child(1) p.info {
+  float: left;
+  padding: 1rem;
+  font-size: 2.5rem
+}
+
+.section:nth-child(1) p.info-title {
+  width: 13rem;
+}
+ #cup-shape-chart{
+   margin: 0 auto;
+   height: 40rem;
+   width:30rem;
+  /* transform: rotate(-90deg);
+  position:relative;
+  top:160px;
+  left:-80px; */
+} 
+.dimension-inspect,.temp-inspect{
+  height: 43rem;
+}
+/*临时*/
+.line-chart {
+  height: 20rem;
+}
+
+ul.color-info,
+ul.axis-position {
+  padding: 0.5rem 0.7rem;
+  height: 6rem;
+  font-size: 2rem;
+}
+
+ul.color-info:before,
+ul.axis-position:before {
+  content: '';
+  display: inline-block;
+  height: 5rem;
+  /*去掉ul中padding，用了box-sizing*/
+  vertical-align: middle;
+}
+
+.color-info li {
+  display: inline-block;
+  margin: 0.5rem 0.5rem;
+  vertical-align: middle;
+}
+
+.color-info li:nth-child(even) {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  margin-right: 20%;
+}
+
+.color-info li:nth-child(2) {
+  background: #000;
+  border: 4px solid #fff;
+}
+
+.color-info li:nth-child(4) {
+  background: #ccc;
+  border: 4px solid #fff;
+}
+
+
+/*page2*/
+
+.printer-lists {
+  height: 43rem;
+  margin: 0 auto;
+  padding: 5px;
+  text-align: center;
+}
+
+.printer-lists>li {
+  float: left;
+  width: 18.5%;
+  margin: 0.5% 0.7%;
+  height: 48.5%;
+  border-radius: 5px;
+  background-color: #373843
+}
+
+table.table-printer {
+  margin: 0 auto;
+  font-size: 1rem;
+  text-align: left;
+  border-collapse: collapse;
+  box-sizing: border-box;
+}
+
+.table-printer tr td {
+  font-size: 1rem;
+}
+
+.table-printer tr th,
+.table-printer tr td {
+  padding: 0.4rem 0.5rem;
+  /*vertical-align: top;*/
+}
+
+
+/*page3*/
+
+.order-summary,
+.order-current {
+  min-height: 43rem;
+}
+
+.table {
+  border-collapse: collapse;
+  box-sizing: border-box;
+  margin: 1.7rem auto;
+  width: 94%;
+  border-radius: 5px;
+  overflow: hidden;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.customerID {
+  width: 8.5%
+}
+
+.table tr td {
+  font-size: 1rem;
+}
+
+.table tr th,
+.table tr td {
+  /*border:1px solid #fff;*/
+  padding: 0.6rem 0.5rem;
+  line-height: 1.4;
+  vertical-align: top;
+  border-left: 1px solid #fff;
+  text-align: center;
+}
+
+.table tr th:first-of-type,
+.table tr td:first-of-type {
+  border-left: 0
+}
+
+.table tr:nth-child(odd) {
+  background: #ccc
+}
+
+.table tr:nth-child(even) {
+  background: #aaa;
+}
+
+.table tr {
+  border-top: 1px solid #ddd;
+}
+
+.table tr:first-of-type {
+  background: #4E505C;
+  border-top: 0
+}
+
+.table tr.active {
+  background: #70EE70;
+}
+
+.order-current table {
+  width: 82%
+}
+
+.order-current table tr:nth-child(odd) th,
+.order-current table tr:nth-child(odd) td {
+  background: #888;
+  font-weight: normal;
+}
+
+.order-current table tr:nth-child(even) th,
+.order-current table tr:nth-child(even) td {
+  background: #aaa;
+  font-weight: normal;
+}
+
+.order-current table tr:first-child th {
+  border-left: 0;
+  text-align: left;
+  padding-left: 15px;
+  background: #4E505C;
+  font-weight: bold;
+}
+
+.cup-cover-color,
+.cup-body-color {
+  display: inline-block;
+  height: 1rem;
+  width: 3rem;
+  border: 2px solid #fff;
+}
+
+.cup-cover-color {
+  background: #000;
+}
+
+.cup-body-color {
+  background: #ccc;
+}
+
+.laser-marking {
+  font-style: italic;
+  font-weight: bolder;
+  color: #000;
+}
+
+.guage-lists {
+  display: flex;
+  justify-content: space-around;
+  width: 94%;
+  margin: 2.5rem auto 0;
+}
+
+.guage-lists div {
+  height: 10rem;
+  width: 10rem;
+}
+
+
+/*page4*/
+
+.OEE-info,
+.capacity,
+.OEE-info li,
+.capacity li {
+  display: flex;
+  justify-content: space-between;
+}
+
+.section:nth-child(4) p.info-title,
+.section:nth-child(4) p.info {
+  padding: 1rem 0.8rem;
+  font-size: 1.8rem
+}
+
+.line-chart4 {
+  height: 20rem;
+  border-radius: 5px;
+}
+
+.OEE-table th,
+.OEE-table td,
+{
+  padding: 0.5rem 0.5rem;
+}
+
+.OEE-table th,
+.OEE-table td,
+.production-table th,
+.production-table td {
+  font-size: 1.2rem;
+}
+
+.OEE-table tr:first-child th,
+.production-table tr:first-child th {
+  border-left: 0;
+  text-align: left;
+  padding-left: 15px;
+  font-size: 1.2rem;
+}
+
+.current-OEE,
+.current-production {
+  height: 37rem;
+}
+
+
+/*删除*/
+
+.on-process-color {
+  color: #90ee90;
+}
+
+.current-capacity-color {
+  color: lightcoral;
+}
+
+.tile.vertical {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.para-padding {
+  margin-bottom: 1rem;
+}
+
+.tile-para-caption.width {
+  width: 120px;
+}
+
+
+/*page5*/
+
+.line-chart5 {
+  height: 12rem;
+  margin-top: 1rem;
+  border-radius: 5px;
+}
+
+.bar-charts-list {
+  height: 43rem;
+}
+
+.guage-chart5 {
+  height: 12rem;
+  margin-bottom: 1.2rem;
+}
+.assembly{
+  
+}
+.relative-ct{
+  position: relative;
+  height: 38.2rem;
+}
+.carousel {
+  width: 800px;
+  overflow: hidden;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+}
+
+ul.img-ct {
+  font-size: 0;
+  position: relative;
+  z-index: -1;
+  left: -800px;
+}
+.img-ct img{
+  padding:0;
+}
+
+.img-ct li {
+  display: inline-block;
+}
+
+.img-ct img {
+  /*height: 400px;*/
+  width: 800px;
+}
+
+
+/*page6*/
+
+.each-eqiupment-OEE {
+  display: flex;
+  justify-content: space-around;
+  height: 43rem;
+  flex-wrap: wrap;
+}
+
+.guage-chart6 {
+  height: 14rem;
+  width: 14rem;
+  margin-top: 1rem;
+  border-radius: 5px;
+}
+
+#each-OEE-bar {
+  height: 25rem;
+  width: 100%;
+}

@@ -1,0 +1,479 @@
+/*css reset*/
+html, body {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    padding: 0;
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/*common css*/
+.layout {
+    width: 1140px;
+    margin: 0 auto;
+}
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,cursive;;
+}
+p {
+    font-size: 14px;
+    color: #777;
+}
+p.description {
+    font-size: 16px;
+    margin:20px 0;
+}
+h3 {
+    font-size: 40px;
+    margin-top: 0;
+}
+h3.title {
+    margin-bottom: 15px; 
+}
+::selection {
+    background-color: #1e88e5;
+}
+div,
+h3,
+h4,
+h5 {
+    text-align: center;
+}
+.container {
+    background: #f7f7f7;
+}
+
+/*specified css*/
+#header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    height: 50px;
+    padding: 15px 0;
+    z-index: 999;
+    transition: .5s;
+}
+.nav-title {
+    float: left;
+    color: #1e88e5;
+    font-size: 28px;
+    line-height: 50px;
+}
+.nav-right {
+    float: right;
+    margin: 0;
+    height: 50px;
+    line-height: 50px;
+}
+.nav-right li {
+    display: inline-block;
+    padding: 0 10px;
+    text-transform: uppercase; 
+}
+.nav-right > li > a {
+    display: block;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    color:#e0e0e0;
+}
+.nav-right li a:hover {
+    color: #1e88e5;
+}
+.overview {      /*background简写顺序*/
+    /*padding: 220px 0;*/
+    /*background: url(img/001.jpg) no-repeat center center /cover;*/
+    text-align: center;
+    color: #e0e0e0;
+    position: relative;
+}
+.overview .first-screen-info{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1
+}
+.overview .intro1 {
+    margin-bottom: 25px;
+    font-style: italic;
+    font-weight: 100;
+}
+.overview .intro2 {
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 50px;
+}
+.overview a {
+    display: inline-block;
+    padding: 20px 40px;
+    background: #1e88e5;
+    border-radius: 3px;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.service {
+    padding: 150px 0;
+}
+.service-intr li {
+    padding: 0 15px;
+    float: left;
+    box-sizing: border-box;
+    width: 380px;  
+}
+i.fa-circle {
+    color: #1e88e5;
+}
+.service-intr h5 {
+    margin: 15px 0;
+    font-size: 18px;
+    font-weight: 700;
+}
+.service-intr p {
+    margin-bottom: 10px;
+    line-height: 1.4;   /*数值，无单位*/
+    color: #777;
+}
+.portfolio {
+    padding: 150px 0;
+}
+.portfolio-intr {       
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.portfolio-intr li {
+    float: left;       /*浮动，图片太大会超出父容器*/
+    width: 260px;
+    margin: 0 15px 30px;
+    background: #fff; 
+    border-radius: 2px;
+    box-shadow: 0 8px 50px 0 rgba(84,84,120,0.3);
+}
+.portfolio-intr li a {
+    display: block;
+    height: 385px;
+    width: 260px;
+    position: relative;  
+}
+.portfolio-intr li a span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 385px;
+    line-height: 385px;
+    background-color: #1e88e5;
+    opacity: 0;
+}
+.portfolio-intr li a:hover span {
+    opacity: 0.7;
+    transition: .5s;
+}
+.portfolio-intr li img {
+    width: 260px;
+    height: 385px;
+    overflow: hidden;
+    z-index: -1;
+}
+.portfolio-intr h4 {
+    margin-bottom: 0;
+    font-weight: 700;
+    font-size: 18px;
+}
+.portfolio-intr h4 + p {
+    margin-top: 0;
+    font-size: 16px;
+    color: #777;
+    font-style: italic;
+    line-height: 1.75;   /*用line-height控制单行文本上下间距也可以*/
+}
+.about {
+    padding: 150px 0;
+}
+.timeline {
+    margin-top: 75px;
+    height: 100%;
+    position: relative;
+}
+.timeline:before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    background-color: #f1f1f1;
+    top: 0;
+    bottom: 0;
+}
+.timeline div.img{
+    display: inline-block;
+    height: 156px;
+    width: 156px;
+    border: 7px solid #f1f1f1;
+    border-radius: 50%;
+    margin-bottom: -7px;
+    overflow: hidden;
+}
+.timeline img {
+    position: relative;
+    top:-20px;
+    width: 156px;
+    margin-bottom: -7px;
+}
+.timeline li {
+    position: relative;
+    margin-top: 125px;
+}
+.timeline .event-intr {
+    position: absolute;
+    top: 0;
+    right: 50%;
+    padding-left: 110px;
+    padding-right: 110px;
+    text-align: right;
+}
+.timeline li:nth-child(even) .event-intr {
+    left: 50%;
+    right: 0;
+    text-align: left;
+}
+/*这个比较复杂了，加中间那条线*/
+/*.timeline li:after {
+    content:"";
+    display: block;
+    width:2px;
+    height:125px;
+    background: #f1f1f1;
+    position: relative;
+    left: 50%;
+    top: 0;
+}
+.timeline li:last-child:after {
+    height: 0;
+    width: 0;
+}*/
+.timeline .event-intr > h5 {
+    margin-bottom: 10px;
+    margin-top: 0;
+    font-size: 18px;   
+}
+.timeline .event-intr > p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.75;
+    color: #777;
+}
+.timeline-end {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 156px;
+    width: 156px;
+    background: #1e88e5;
+    border: 7px solid #f1f1f1;
+    border-radius: 50%;
+    margin: 0 auto;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #fff;
+}
+.team {
+    padding: 150px 0;
+}
+.member img {
+    height: 225px;
+    width: 225px;
+    border: 7px solid #fff;
+    border-radius: 50%;
+}
+.member li {
+    margin-bottom: 50px;
+    padding: 0 60px;
+    float: left;
+}
+.member h5 {
+    margin-top: 25px;
+    margin-bottom: 0;
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 1.1;
+    color: #333;
+}
+.member p {
+    margin-top: 0;
+    margin-bottom: 10px;
+    line-height: 1.75;
+}
+.member-contact a {
+    display: inline-block;
+    margin: 0 5px;
+    background: #333;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+}
+.member-contact a:hover {
+    background-color: #1e88e5;
+    transition: .5s;
+}
+.team .team-ending {
+    margin: 0 auto;
+    width: 750px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 1.75;
+    color: #777;
+}
+.partner {
+    text-align: center;
+    padding: 0;
+}
+.partner a {
+    display: inline-block;
+    margin: 50px 1%;
+    width: 22%;            /*margin为0时，为什么25平分4份不行*/
+    box-sizing: border-box;
+}
+.contact-bg {
+    background: #222 url(../img/map-image.png) no-repeat center center /cover;
+}
+.contact {
+    text-align: center;
+    padding: 150px 0;
+}
+.contact h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    line-height: 1.1;
+    color: #fff;
+}
+.contact h3 + p {
+    margin-top: 0;
+    margin-bottom: 75px;
+    font-size: 16px;
+    color: #777;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.75;   /*用line-height控制单行文本上下间距也可以*/
+}
+.contact-left {
+    box-sizing: border-box;
+    float: left;
+    width: 50%;
+    padding:15px ;
+}
+.contact-right {
+    box-sizing: border-box;
+    float: right;
+    width: 50%;
+    padding:15px ;
+    margin-bottom: 10px;
+}
+.contact input[type="text"] {
+    box-sizing: border-box;
+    float: left;
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 26px;
+    border-radius: 4px; 
+    font-size: 16px;
+    line-height: 1.1;
+}
+.contact textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px;
+    border-radius: 4px; 
+    font-size: 14px;
+    line-height: 1.1;
+}
+/*这个还影响textarea里面的placeholder样式*/
+/*以下为placeholder兼容样式，测试一下合起来写会失效*/
+::-webkit-input-placeholder  { /* WebKit browsers */   
+    font-family: Helvetica,Arial,sans-serif;
+    color:#bbb;
+    font-size: 14px;  
+    font-weight: 700;
+    text-transform: uppercase;
+}  
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */  
+    font-family: Helvetica,Arial,sans-serif;
+    color:#bbb;
+    font-size: 14px;  
+    font-weight: 700;
+    text-transform: uppercase;
+}  
+::-moz-placeholder { /* Mozilla Firefox 19+ */  
+    font-family: Helvetica,Arial,sans-serif;
+    color:#bbb;
+    font-size: 14px;  
+    font-weight: 700;
+    text-transform: uppercase;
+}  
+:-ms-input-placeholder { /* Internet Explorer 10+ */  
+    font-family: Helvetica,Arial,sans-serif;;
+    color:#bbb;
+    font-size: 14px;  
+    font-weight: 700;
+    text-transform: uppercase;
+} 
+input[type="submit"] {
+    padding: 20px 40px;
+    display: inline-block;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 3px;
+    text-transform: uppercase;
+    background-image: linear-gradient(100deg,#fe8855 0,#f95462 35%,#ed7aa3 100%)
+}
+input {
+    outline-color: #fed136;
+    border: 0px;
+}
+#footer {
+    padding: 25px;
+    font-size: 14px;
+}
+#footer ul{
+    margin: 0;
+    text-align: center;
+}
+#footer a.icon {
+    text-align: center;
+    display: inline-block;
+    margin: 0 5px;
+    background: #333;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+}
+#footer .link,
+.copyright {
+    color: #1e88e5;
+    font-size: 16px;
+    line-height: 40px;
+}
+.copyright {
+    color: #333;
+}
+#footer li {
+    display: inline-block;
+    width: 33%;
+}
+#footer .link {
+    display: inline-block;
+    padding-left: 10px;
+}

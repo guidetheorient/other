@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>echart-demo</title>
+  <link rel="stylesheet" type="text/css" href="src/index.css">
+  <link rel="stylesheet" type="text/css" href="src/reference/iconfont/iconfont.css">
+  <link rel="stylesheet" href="src/grid.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="head">
+      <h1 class="company-name">苏州XX有限公司</h1>
+    </div>
+    <div class="content-container clearfix">
+      <div class="sidebar">
+        <ul class="para-list">
+          <li class="active"><a href="#">信息概览1</a></li>
+          <li><a href="#">信息概览2</a></li>
+        </ul>
+      </div>
+      <div class="content">
+        <div class="info-window clearfix">
+          <div class="current-data clearfix">
+            <ul class="data2 clearfix col-md-6">
+              <li class="item">
+                <p class="info-type">用户</p>
+                <ul>
+                  <li class="info">
+                    <p class="item-title">订单ID</p>
+                    <p class="item-value">201706230001</p>
+                  </li>
+                  <li class="info">
+                    <p class="item-title">用户ID</p>
+                    <p class="item-value">XXX-1</p>
+                  </li>
+                </ul>
+              </li>
+              <li class="item">
+                <p class="info-type">订单信息</p>
+                <ul>
+                  <li class="info">
+                    <p class="item-title">下单时间</p>
+                    <p class="item-value">19:00:00</p>
+                  </li>
+                  <li class="info">
+                    <p class="item-title">预计完成时间</p>
+                    <p class="item-value">19:15:00</p>
+                  </li>
+                  <li class="info">
+                    <p class="item-title">订单状态</p>
+                    <p class="item-value">加工中</p>
+                  </li>
+                  <li class="info">
+                    <p class="item-title">自定义参数1</p>
+                    <p class="item-value">placeholder</p>
+                  </li>
+                  <li class="info">
+                    <p class="item-title">自定义参数2</p>
+                    <p class="item-value">placeholder</p>
+                  </li>
+                </ul>
+              </li>
+              <li class="item system-info">
+                <ul>
+                  <li class="info">
+                    <p class="item-title"><i class="iconfont icon-shijian"></i>时间</p>
+                    <p class="item-value">2017/06/23 19:00:00</p>
+                  </li>
+                  <li class="info">
+                    <p class="item-title"><i class="iconfont icon-wendu"></i>温度</p>
+                    <p class="item-value">24°C</p>
+                  </li>
+                  <li class="info">
+                    <p class="item-title"><i class="iconfont icon-humidity"></i>湿度</p>
+                    <p class="item-value">80%</p>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <div class="charts col-md-6">
+              <div id="deburringRatio" class="guage-chart"></div>
+              <div id="millingRatio" class="guage-chart"></div>
+              <div class="chart-ct">
+                <p class="OEE-bar-title">生产效率</p>
+                <p class="OEE-bar-title-value"></p>
+                <div id="OEE_bar_chart" class="line-chart"></div>
+              </div>
+              <div class="chart-ct production-chart-ct">
+                <p class="OEE-bar-title">合格品</p>
+                <div id="production" class="line-chart"></div>
+              </div>
+            </div>
+          </div>
+          <div class="current-data clearfix">
+            <div class="col-md-12">
+                <table class="table order-summary">
+                  <tr>
+                    <th>订单ID</th>
+                    <th>产品序列号</th>
+                    <th>托盘号码</th>
+                    <th>订单状态</th>
+                    <th>客户ID</th>
+                    <th>下单时间</th>
+                    <th>开始时间</th>
+                    <th>结束时间</th>
+                  </tr>
+                  <tr class="active">
+                    <td>201706260001</td>
+                    <td>abcd1234</td>
+                    <td>001</td>
+                    <td>在加工</td>
+                    <td>XXX-001</td>
+                    <td>2017/06/26 19:00:00</td>
+                    <td>2017/06/26 20:00:00</td>
+                    <td>2017/06/26 20:10:00</td>
+                  </tr>
+                  <tr class="active">
+                    <td>201706260002</td>
+                    <td>abcd1234</td>
+                    <td>002</td>
+                    <td>在加工</td>
+                    <td>XXX-002</td>
+                    <td>2017/06/26 19:01:00</td>
+                    <td>2017/06/26 20:01:00</td>
+                    <td>2017/06/26 20:11:00</td>
+                  </tr>
+                </table>
+                <div class="guage-lists">
+                  <div id="finished-order"></div>
+                  <div id="unfinished-order"></div>
+                  <div id="xx-order"></div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <script src="src/reference/jquery-3.2.0.js"></script>
+    <script src="src/reference/echarts.min.js"></script>
+    <script src="src/reference/ecStat.min.js"></script>
+    <script src="src/charts.js"></script>
+    <script>
+      var $content = $('.content')
+      var $paraList = $('.para-list')
+      var $titleLists = $paraList.children()
+      var $currentData = $('.current-data')
+      var $currentTitle = $('.current-title')
+      var count = $currentData.length //9
+      var $infoWindow = $('.info-window')
+      var $sideBar = $('.sidebar')
+
+      var $OEEBarTitleValue = $('.OEE-bar-title-value')
+      //将中间栏宽度赋值给单个信息ul
+      $currentData.css({
+        'width': $content.width()
+      })
+      //得出ul容器宽度
+      $infoWindow.width(count * $currentData.outerWidth(true))
+
+      var infoWidth = $currentData.outerWidth(true)
+      $paraList.on('click', 'li', function () {
+        var index = $(this).index()
+        $currentTitle.text($titleLists.eq(index).text())
+        $infoWindow.finish().animate({
+          left: -index * infoWidth
+        })
+        $paraList.children().removeClass('active').eq(index).addClass('active')
+      })
+      
+      var $orderTable = $('.order-summary')
+      var contentFragment = ''
+      for(let i=1;i<6;i++){
+        contentFragment += '<tr>\
+                  <td>201706260001</td>\
+                  <td>abcd1234</td>\
+                  <td>00'+(i+2)+'</td>\
+                  <td>等待</td>\
+                  <td>XXX-00'+(i+2)+'</td>\
+                  <td>2017/06/26 19:0'+(i+1)+':00</td>\
+                  <td>2017/06/26 20:0'+(i+1)+':00</td>\
+                  <td>2017/06/26 20:1'+(i+1)+':00</td>\
+                </tr>'
+      }
+      $orderTable.append(contentFragment)
+      // currentChartsWidth = $('.content-container').width()-$sideBar.outerWidth(true)-$content.outerWidth(true)
+      // $('.charts').css({'width':currentChartsWidth})
+
+      // $(window).resize(function(){
+      //   currentChartsWidth = $('body').width()-$sideBar.outerWidth(true)-$content.outerWidth(true)
+      //   if(currentChartsWidth > 250){
+      //     $('.charts').css({'width':currentChartsWidth})
+      //     deburringChart.setOption(option0)
+      //   }else{
+      //     console.log(currentChartsWidth)
+      //   }
+      // })
+    </script>
+</body>
+
+</html>

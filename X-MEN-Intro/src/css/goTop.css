@@ -1,0 +1,19 @@
+.go-top{
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  height: 40px;
+  line-height: 40px;
+  width: 40px;
+  font-size: 20px;
+  border-radius: 4px;
+  text-align: center;
+  color: #e0e0e0;
+  background-color: rgba(100, 100, 100, 0.4);
+  cursor: pointer;
+  transition: background-color .8s;
+}
+.go-top:hover{
+  background-color: #1e88e5;
+  opacity: 0.8;
+}

@@ -1,0 +1,83 @@
+/*.waterfall-wrap{
+  width: 1140px;
+  margin: 0 auto;
+}*/
+.newsPic-container{
+  position: relative;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.newsPic-container .item{
+  position: absolute;
+  width: 260px;
+  margin: 10px;
+  background: #fff;
+  transition: all 0.8s;
+  box-shadow: 0 8px 50px 0 rgba(84,84,120,0.3);
+}
+.newsPic-container .item img{
+  width: 260px;
+  overflow: hidden;
+  z-index: -1;
+}
+.newsPic-container .item .work-name{
+  margin-bottom: 0;
+  font-weight: 700;
+  font-size: 18px;
+}
+.newsPic-container .item .work-description{
+  margin-top: 0;
+  font-size: 16px;
+  color: #777;
+  font-style: italic;
+  line-height: 1.75;
+}
+.hide{
+  display: none;
+}
+
+.newsPic-container .item a {
+    display: block;
+    position: relative;
+}
+.newsPic-container .item a span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: #1e88e5;
+    opacity: 0;
+}
+.newsPic-container .item a:hover span {
+    opacity: 0.7;
+    transition: .5s;
+}
+
+
+#load-more-button{
+  text-decoration:none;
+  display:block;
+  margin:0 auto;
+  padding:12px 10px;
+  text-align:center;
+  width:80px;
+  background-color: #1e88e5;
+  color:#fff;
+  font-size:16px;
+  font-weight: 700;
+  font-family: "Helvetica Neue",Helvetica,Arial;
+  border-radius: 3px;
+}
+/*注意loading.gif背景色透明或与a链接背景色一致*/
+#load-more-button.click{
+  opacity: 0.4;
+  pointer-events:none;
+  /*background:url(img/loading1.gif) center no-repeat ;*/
+  /*background-size:contain;*/
+}
+/*‘a’链接中换成loading图片时，没有文字，需要被撑开*/
+/*#load-more-button.click:before{
+  content: '';
+  height: 17px;
+  display: block;
+}*/

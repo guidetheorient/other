@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="src/lib/jquery.fullpage.css">
+  <link rel="stylesheet" type="text/css" href="src/css/index.css">
+  <link rel="stylesheet" type="text/css" href="src/css/reset&common.css">
+  <link rel="stylesheet" type="text/css" href="src/css/grid.css">
+  <link rel="stylesheet" type="text/css" href="src/css/iconfont/iconfont.css">
+</head>
+
+<body>
+  <div id="ct">
+    <section class="section  active">
+      <div class="title">• 视觉检测</div>
+      <hr/>
+      <div class="col-md-6 col-xs-12">
+        <div class="tile tile-dark-blue dimension-inspect">
+          <div class="tile-caption">尺寸检测</div>
+          <div id="inspectDimensionChart" class="line-chart"></div>
+          <div id="dimension-radar" class="line-chart"></div>
+        </div>
+      </div>
+      <div class="col-md-6 col-xs-12">
+        <div class="tile tile-dark-blue temp-inspect">
+          <div class="tile-caption">温度检测</div>
+          <div id="cup-shape-chart" class="line-chart"></div>
+        </div>
+    </section>
+    <section class="section">
+      <div class="title">• 3D打印进度页面</div>
+      <hr/>
+      <div class="col-md-12">
+        <div class="tile">
+          <ul class="printer-lists">
+            <li>
+              <i class="iconfont icon-Ddayin"></i>
+              <table class="table-printer">
+                <tr>
+                  <th>打印机编号</th>
+                  <td>001</td>
+                </tr>
+                <tr>
+                  <th>加工进度</th>
+                  <td>
+                    <li class="progress">
+                      <div class="progress-bar" style="width:60%"></div>
+                    </li>
+                  </td>
+                </tr>
+                <tr>
+                  <th>订单编号</th>
+                  <td>20170626001</td>
+                </tr>
+                <tr>
+                  <th>用户</th>
+                  <td>ZJG-001</td>
+                </tr>
+                <tr>
+                  <th>模型名</th>
+                  <td>Sherlock</td>
+                </tr>
+              </table>
+            </li>
+            <li>
+              <i class="iconfont icon-Ddayin"></i>
+              <table class="table-printer">
+                <tr>
+                  <th>打印机编号</th>
+                  <td>001</td>
+                </tr>
+                <tr>
+                  <th>加工进度</th>
+                  <td>
+                    <li class="progress">
+                      <div class="progress-bar" style="width:60%"></div>
+                    </li>
+                  </td>
+                </tr>
+                <tr>
+                  <th>订单编号</th>
+                  <td>20170626001</td>
+                </tr>
+                <tr>
+                  <th>用户</th>
+                  <td>ZJG-001</td>
+                </tr>
+                <tr>
+                  <th>模型名</th>
+                  <td>Sherlock</td>
+                </tr>
+              </table>
+            </li>
+            <li>
+              <i class="iconfont icon-Ddayin"></i>
+              <table class="table-printer">
+                <tr>
+                  <th>打印机编号</th>
+                  <td>001</td>
+                </tr>
+                <tr>
+                  <th>加工进度</th>
+                  <td>
+                    <li class="progress">
+                      <div class="progress-bar" style="width:60%"></div>
+                    </li>
+                  </td>
+                </tr>
+                <tr>
+                  <th>订单编号</th>
+                  <td>20170626001</td>
+                </tr>
+                <tr>
+                  <th>用户</th>
+                  <td>ZJG-001</td>
+                </tr>
+                <tr>
+                  <th>模型名</th>
+                  <td>Sherlock</td>
+                </tr>
+              </table>
+            </li>
+            <li>
+              <i class="iconfont icon-Ddayin"></i>
+              <table class="table-printer">
+                <tr>
+                  <th>打印机编号</th>
+                  <td>001</td>
+                </tr>
+                <tr>
+                  <th>加工进度</th>
+                  <td>
+                    <li class="progress">
+                      <div class="progress-bar" style="width:60%"></div>
+                    </li>
+                  </td>
+                </tr>
+                <tr>
+                  <th>订单编号</th>
+                  <td>20170626001</td>
+                </tr>
+                <tr>
+                  <th>用户</th>
+                  <td>ZJG-001</td>
+                </tr>
+                <tr>
+                  <th>模型名</th>
+                  <td>Sherlock</td>
+                </tr>
+              </table>
+            </li>
+            <li>
+              <i class="iconfont icon-Ddayin"></i>
+              <table class="table-printer">
+                <tr>
+                  <th>打印机编号</th>
+                  <td>001</td>
+                </tr>
+                <tr>
+                  <th>加工进度</th>
+                  <td>
+                    <li class="progress">
+                      <div class="progress-bar" style="width:60%"></div>
+                    </li>
+                  </td>
+                </tr>
+                <tr>
+                  <th>订单编号</th>
+                  <td>20170626001</td>
+                </tr>
+                <tr>
+                  <th>用户</th>
+                  <td>ZJG-001</td>
+                </tr>
+                <tr>
+                  <th>模型名</th>
+                  <td>Sherlock</td>
+                </tr>
+              </table>
+            </li>
+            <li>
+              <i class="iconfont icon-Ddayin"></i>
+              <table class="table-printer">
+                <tr>
+                  <th>打印机编号</th>
+                  <td>001</td>
+                </tr>
+                <tr>
+                  <th>加工进度</th>
+                  <td>
+                    <li class="progress">
+                      <div class="progress-bar" style="width:60%"></div>
+                    </li>
+                  </td>
+                </tr>
+                <tr>
+                  <th>订单编号</th>
+                  <td>20170626001</td>
+                </tr>
+                <tr>
+                  <th>用户</th>
+                  <td>ZJG-001</td>
+                </tr>
+                <tr>
+                  <th>模型名</th>
+                  <td>Sherlock</td>
+                </tr>
+              </table>
+            </li>
+            <li>
+              <i class="iconfont icon-Ddayin"></i>
+              <table class="table-printer">
+                <tr>
+                  <th>打印机编号</th>
+                  <td>001</td>
+                </tr>
+                <tr>
+                  <th>加工进度</th>
+                  <td>
+                    <li class="progress">
+                      <div class="progress-bar" style="width:60%"></div>
+                    </li>
+                  </td>
+                </tr>
+                <tr>
+                  <th>订单编号</th>
+                  <td>20170626001</td>
+                </tr>
+                <tr>
+                  <th>用户</th>
+                  <td>ZJG-001</td>
+                </tr>
+                <tr>
+                  <th>模型名</th>
+                  <td>Sherlock</td>
+                </tr>
+              </table>
+            </li>
+            <li>
+              <i class="iconfont icon-Ddayin"></i>
+              <table class="table-printer">
+                <tr>
+                  <th>打印机编号</th>
+                  <td>001</td>
+                </tr>
+                <tr>
+                  <th>加工进度</th>
+                  <td>
+                    <li class="progress">
+                      <div class="progress-bar" style="width:60%"></div>
+                    </li>
+                  </td>
+                </tr>
+                <tr>
+                  <th>订单编号</th>
+                  <td>20170626001</td>
+                </tr>
+                <tr>
+                  <th>用户</th>
+                  <td>ZJG-001</td>
+                </tr>
+                <tr>
+                  <th>模型名</th>
+                  <td>Sherlock</td>
+                </tr>
+              </table>
+            </li>
+            <li>
+              <i class="iconfont icon-Ddayin"></i>
+              <table class="table-printer">
+                <tr>
+                  <th>打印机编号</th>
+                  <td>001</td>
+                </tr>
+                <tr>
+                  <th>加工进度</th>
+                  <td>
+                    <li class="progress">
+                      <div class="progress-bar" style="width:60%"></div>
+                    </li>
+                  </td>
+                </tr>
+                <tr>
+                  <th>订单编号</th>
+                  <td>20170626001</td>
+                </tr>
+                <tr>
+                  <th>用户</th>
+                  <td>ZJG-001</td>
+                </tr>
+                <tr>
+                  <th>模型名</th>
+                  <td>Sherlock</td>
+                </tr>
+              </table>
+            </li>
+            <li>
+              <i class="iconfont icon-Ddayin"></i>
+              <table class="table-printer">
+                <tr>
+                  <th>打印机编号</th>
+                  <td>001</td>
+                </tr>
+                <tr>
+                  <th>加工进度</th>
+                  <td>
+                    <li class="progress">
+                      <div class="progress-bar" style="width:60%"></div>
+                    </li>
+                  </td>
+                </tr>
+                <tr>
+                  <th>订单编号</th>
+                  <td>20170626001</td>
+                </tr>
+                <tr>
+                  <th>用户</th>
+                  <td>ZJG-001</td>
+                </tr>
+                <tr>
+                  <th>模型名</th>
+                  <td>Sherlock</td>
+                </tr>
+              </table>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="title">• 总订单信息</div>
+      <hr/>
+      <div class="col-md-12">
+        <div class="tile tile-dark-blue order-summary">
+          <div class="tile-caption">总体</div>
+          <table class="table">
+            <tr>
+              <th>订单ID</th>
+              <th>订单状态</th>
+              <th>模型名称</th>
+              <th class="customerID">用户</th>
+              <th>下单时间</th>
+              <th>开始时间</th>
+              <th>结束时间</th>
+            </tr>
+            <tr>
+              <td>201706260001</td>
+              <td>在加工</td>
+              <td>Ashe.stl</td>
+              <td>ZJG-001</td>
+              <td>2017/06/26 19:00:00</td>
+              <td>2017/06/26 20:00:00</td>
+              <td>2017/06/26 20:10:00</td>
+            </tr>
+            <trZ>
+              <td>201706260002</td>
+              <td>在加工</td>
+              <td>Viktor.stl</td>
+              <td>ZJG-002</td>
+              <td>2017/06/26 19:01:00</td>
+              <td>2017/06/26 20:01:00</td>
+              <td>2017/06/26 20:11:00</td>
+            </trZ>
+          </table>
+          <div class="guage-lists">
+            <div id="finished-order"></div>
+            <div id="unfinished-order"></div>
+            <div id="xx-order"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="title">• 001号打印机状态</div>
+      <hr/>
+      <div class="col-md-12 para-padding">
+        <div class="tile-caption">总体</div>
+        <div class="col-md-4">
+          <div class="tile tile-dark-blue vertical">
+            <p class="tile-para-caption">
+              已完成订单数
+            </p>
+            <p class="tile-para">
+              20
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="tile tile-dark-blue vertical">
+            <p class="tile-para-caption">
+              合格订单数
+            </p>
+            <p class="tile-para">
+              20
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="tile tile-dark-blue vertical">
+            <p class="tile-para-caption">
+              下一订单ID
+            </p>
+            <p class="tile-para">
+              201706260011
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12 para-padding">
+        <div class="tile-caption">当前订单</div>
+        <div class="col-md-12">
+          <div class="tile tile-dark-blue vertical">
+            <p class="tile-para-caption width">加工进度</p>
+            <div class="progress">
+              <div class="progress-bar" style="width:60%"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="tile tile-dark-blue vertical">
+            <p class="tile-para-caption">
+              订单ID
+            </p>
+            <p class="tile-para">
+              201706260011
+            </p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="tile tile-dark-blue vertical">
+            <p class="tile-para-caption">
+              订单状态
+            </p>
+            <p class="tile-para">
+              打印中
+            </p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="tile tile-dark-blue vertical">
+            <p class="tile-para-caption">
+              模型名称
+            </p>
+            <p class="tile-para">
+              Ashe.stl
+            </p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="tile tile-dark-blue vertical">
+            <p class="tile-para-caption">
+              用户
+            </p>
+            <p class="tile-para">
+              ZJG-001
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="tile tile-dark-blue vertical">
+            <p class="tile-para-caption">
+              下单时间
+            </p>
+            <p class="tile-para">
+              2017/06/26 19:00:00
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="tile tile-dark-blue vertical">
+            <p class="tile-para-caption">
+              预计开始
+            </p>
+            <p class="tile-para">
+              2017/06/26 20:00:00
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="tile tile-dark-blue vertical">
+            <p class="tile-para-caption">
+              预计结束时间
+            </p>
+            <p class="tile-para">
+              2017/06/26 22:00:00
+            </p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="tile tile-dark-blue vertical">
+            <p class="tile-para-caption">
+              预计耗时
+            </p>
+            <p class="tile-para">
+              2h
+            </p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="tile tile-dark-blue vertical">
+            <p class="tile-para-caption">
+              花费丝长
+            </p>
+            <p class="tile-para">
+              5m
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12 para-padding">
+        <div class="tile-caption">打印机参数</div>
+        <div class="col-md-4">
+          <div class="tile tile-dark-blue vertical">
+            <p class="tile-para-caption">
+              已打印层数
+            </p>
+            <p class="tile-para">
+              7 /共780层
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="tile tile-dark-blue vertical">
+            <p class="tile-para-caption">
+              喷头温度
+            </p>
+            <p class="tile-para">
+              200℃
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="tile tile-dark-blue vertical">
+            <p class="tile-para-caption">
+              热床温度
+            </p>
+            <p class="tile-para">
+              60℃
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="tile tile-dark-blue vertical">
+            <p class="tile-para-caption">
+              打印速度
+            </p>
+            <p class="tile-para">
+              20mm/s
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="tile tile-dark-blue vertical">
+            <p class="tile-para-caption">
+              风扇转速
+            </p>
+            <p class="tile-para">
+              80%
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="title">• 鲁班锁装配</div>
+      <hr/>
+      <div class="col-md-6 col-xs-12">
+        <div class="tile tile-dark-blue vertical">
+          <p class="tile-para-caption width">装配进度</p>
+          <div class="progress">
+            <div class="progress-bar" style="width:60%"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-xs-12">
+        <div class="tile tile-dark-blue vertical">
+          <p class="tile-para-caption">
+            已装配组数
+          </p>
+          <p class="tile-para">
+            10
+          </p>
+        </div>
+      </div>
+      <div class="col-md-12 assembly">
+        <div class="tile tile-dark-blue relative-ct">
+          <div class="tile-caption">实时装配画面</div>
+          <div class="carousel">
+            <ul class="img-ct">
+              <li><img src="img/1.jpg" alt=""></li>
+              <li><img src="img/2.jpg" alt=""></li>
+              <li><img src="img/3.jpg" alt=""></li>
+              <li><img src="img/4.jpg" alt=""></li>
+              <li><img src="img/5.jpg" alt=""></li>
+              <li><img src="img/6.jpg" alt=""></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    </div>
+    <script src="src/lib/jquery-3.2.0.js"></script>
+    <script src="src/lib/jquery.fullpage.min.js"></script>
+    <script src="src/lib/echarts.min.js"></script>
+    <script src="src/lib/walden.js"></script>
+    <script src="src/lib/ecStat.min.js"></script>
+    <script src="src/js/charts.js"></script>
+    <script>
+      $(function () {
+        $('#ct').fullpage({
+          verticalCentered: false
+        });
+      });
+
+      var $orderTable = $('.order-summary table')
+      var contentFragment = ''
+      var stlName = ['Cryophoenix.stl', 'SadMummy.stl', 'Draven.stl', 'Garen.stl', 'JarvanⅣ.stl', 'Kassadin.stl',
+        'Katarina.stl', 'Brand.stl'
+      ]
+      for (let i = 1; i < 8; i++) {
+        contentFragment += '<tr>\
+                <td>20170626000' + (i + 2) +
+          '</td>\
+                <td>在加工</td>\
+                <td>' + stlName[i] +
+          '</td>\
+                <td>ZJG-00' + (i + 2) + '</td>\
+                <td>2017/06/26 19:0' + (i + 1) +
+          ':00</td>\
+                <td>2017/06/26 20:0' + (i + 1) + ':00</td>\
+                <td>2017/06/26 20:1' +
+          (i + 1) + ':00</td>\
+              </tr>'
+      }
+      $orderTable.append(contentFragment)
+
+
+      var $imgCt = $('.img-ct')
+
+      //使图片水平排列
+      var imgWidth = $('.img-ct img').width()
+      var imgQuanity = $('.img-ct img').length
+      $imgCt.width((imgQuanity + 2) * imgWidth)
+
+      //复制首尾元素
+      var $imgCtChildren = $imgCt.children()
+      $imgCt.append($imgCtChildren.first().clone())
+      $imgCt.prepend($imgCtChildren.last().clone())
+
+      var index = 0;
+
+      function showBefore(interval) {
+        if (interval == undefined) {
+          interval = 1
+        }
+        $imgCt.finish().animate({
+          left: '+=' + imgWidth * interval, //引号
+        }, function () { //回调函数必须写在animate中，如果在外面的话，动画没有执行完就会执行
+          index -= interval
+          if (index < 0) {
+            $imgCt.css({
+              'left': -imgWidth * imgQuanity + 'px'
+            })
+            index = imgQuanity - 1
+          }
+        })
+      }
+
+      function showAfter(interval) {
+        if (interval == undefined) {
+          interval = 1
+        }
+        $imgCt.finish().animate({
+          opacity: 1
+        }, function () {
+          $(this).css({
+              left: '-=' + imgWidth * interval
+            })
+            .animate({
+              opacity: 1
+            }, function () {
+              index += interval
+              if (index === imgQuanity) {
+                $imgCt.css({
+                  'left': -imgWidth + 'px'
+                })
+                index = 0
+              }
+            })
+        })
+      }
+
+      //在用户点击的情况下，重新计时
+      autoPlay()
+
+      function autoPlay() {
+        clock = setInterval(function () {
+          showAfter()
+        }, 1000)
+        // console.log(clock)
+      }
+
+      function stopPlay() {
+        clearInterval(clock)
+      }
+    </script>
+</body>
+
+</html>
