@@ -39,7 +39,7 @@ option30 = {
                     fontSize:22,
                 }
              },
-            data: [{ value: 50, name: '什么率' }]
+            data: [{ value: 50, name: '合格率' }]
         }
     ]
 };
