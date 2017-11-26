@@ -3,8 +3,10 @@
 
 * 豆瓣电影
 [预览](https://guidetheorient.github.io/topfilms/src/)
-[仓库](https://github.com/guidetheorient/topfilms)
 
 * ECharts实例
 [预览1](https://guidetheorient.github.io/other/singlepage/)
-[预览2](https://guidetheorient.github.io/other/fullpage/)
+[预览2](https://guidetheorient.github.io/other/fullpage/)  
+
+* Vue Todo
+[预览](https://guidetheorient.github.io/Vue-todo/)
